@@ -8,10 +8,10 @@ remove_database:
 	docker rm mysql
 
 create_table:
-	docker exec -i mysql mysql -uroot -proot mydb < database/itemup.sql
+	docker exec -i mysql mysql -uroot -proot mydb < database/tableup.sql
 
 drop_table:
-	docker exec -i mysql mysql -uroot -proot mydb < database/itemdown.sql
+	docker exec -i mysql mysql -uroot -proot mydb < database/tabledown.sql
 
 start_database_compose:
 	docker-compose -f docker-compose-mysql.yaml up -d

@@ -12,12 +12,7 @@ connection.connect((err)=>{
     if (err)console.log(err);
     console.log("connected");
 
-    const query = `CREATE TABLE \`account\` (
-        id integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
-        email varchar(255) NOT NULL ,
-        username varchar(255) NOT NULL,
-        password varchar(255) NOT NULL
-    );`
+    const query = `DELETE FROM account WHERE id=1;`
     connection.query(query,(err,result)=>{
         if (err)console.log(err);
         console.log(result);
